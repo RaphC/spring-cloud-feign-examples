@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.perso.rcr.netflix.feign.support;
+package org.perso.rcr.spring.cloud.feign;
 
 import static com.fasterxml.jackson.databind.SerializationFeature.WRITE_DATES_AS_TIMESTAMPS;
 import static com.google.common.collect.Lists.newArrayList;
