@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: myApplication
+myst:
+  myfeignClient:   
+    url: http://localhost:3222      
+...
