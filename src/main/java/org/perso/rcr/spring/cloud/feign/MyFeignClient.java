@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.perso.rcr.netflix.feign.support;
+package org.perso.rcr.spring.cloud.feign;
 
 import java.util.List;
 
