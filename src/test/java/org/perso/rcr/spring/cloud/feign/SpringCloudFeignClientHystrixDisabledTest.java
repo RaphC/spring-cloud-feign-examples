@@ -5,13 +5,9 @@ package org.perso.rcr.spring.cloud.feign;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.aResponse;
 import static com.github.tomakehurst.wiremock.client.WireMock.get;
-import static com.github.tomakehurst.wiremock.client.WireMock.getRequestedFor;
 import static com.github.tomakehurst.wiremock.client.WireMock.reset;
-import static com.github.tomakehurst.wiremock.client.WireMock.verify;
-import static com.github.tomakehurst.wiremock.client.WireMock.absent;
 import static com.github.tomakehurst.wiremock.client.WireMock.urlEqualTo;
 import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.wireMockConfig;
-import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import org.apache.http.HttpStatus;
 import org.junit.Before;
@@ -23,14 +19,11 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.web.client.HttpClientErrorException;
 
 import com.github.tomakehurst.wiremock.common.Slf4jNotifier;
 import com.github.tomakehurst.wiremock.core.WireMockConfiguration;
 import com.github.tomakehurst.wiremock.junit.WireMockClassRule;
 import com.google.common.net.HttpHeaders;
-
-import feign.RetryableException;
 
 /**
  * @author rachaumi
@@ -89,8 +82,6 @@ public class SpringCloudFeignClientHystrixDisabledTest {
 	                ));
         
 		myFeignClient.myResource("noComptePayeur", "noReference", null);
-		//verify(getRequestedFor(urlEqualTo("/noComptePayeur/noReference"))
-		//        .withHeader("my-header-specified", absent()));
 	}
 	
 }

@@ -5,7 +5,6 @@ package org.perso.rcr.spring.cloud.feign;
 
 import java.io.Serializable;
 
-import com.bouygtel.swad.web.representation.BaseObject;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -14,7 +13,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  *
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class MyResponsePojo extends BaseObject implements Serializable {
+public class MyResponsePojo implements Serializable {
 
 	/**
 	 * 
